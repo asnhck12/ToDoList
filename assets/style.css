@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+#content {
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+}
+
+#content * {
+    border: 1px red solid;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+}
