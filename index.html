@@ -24,11 +24,50 @@
                     <button id="newProjectButton">New Project</button>
                 </div>
                 <div id="projectLists">
-                    projects
+                    <h2>Projects</h2>
+                    <div>
+                        <h3>Project 1</h3>
+                    </div>
+                    <div>
+                        <h3>Project 2</h3>                
+                    </div>
                 </div>
             </div>
             <div id="projectView">
                 Where the projects will be seen
+                <div id="form">
+                    <!--create a popup under a higher up html-->
+                    <form id="">
+                        <label for="projectName">Project:</label>
+                        <input type="text" id="project" name="project"><br>
+                        <label for="projectDescription">Description:</label>
+                        <input type="text" id="description" name="Description"><br>
+                        <label for="projectDueDate">Due Date:</label>
+                        <input type="date" id="dueDate" name="dueDate" value="2022-01-01"><br>
+                        <label for="priority">Priority:</label>
+                        <select id="priority" name="priority">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                        <label for="toDo">Project:</label>
+                        <input type="text" id="toDo" name="toDo"><br>
+                                    
+
+                        <br><br>
+                        <input type="submit" value="Submit">
+                        
+                    </form>
+                    <button id="close-form">Close</button>
+                </div>
+                <div id="fullProjectView">
+                    <h3>Project Name</h3>
+                    <p>Project Description</p>
+                    <p>Due date: </p>
+                    <p>Priority: </p>
+                    <p>To Do List: </p>
+
+                </div>
             </div>
         </div>
     </div>    
