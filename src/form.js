@@ -1,18 +1,18 @@
-// const projectName = document.getElementById("project");
-let projectDescription = document.getElementById("projectDescription");
-let dueDate = document.getElementById("projectDueDate");
-let priority = document.getElementById("priority");
-let toDO = document.getElementById("toDo");
-let submit = document.getElementById("submit");
+const formArray = [];
 
-
-//store form details in local storage
-//
-
+//export function for form submission
 export function formSubmission(form) {
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    console.log("Hello world");
+    //store form details in local storage
+    var items = document.getElementsByClassName("projectForm");
+
+    for (let i = 0; i < items.length; i++){
+        localStorage.setItem(items[i].name, items[i].value);
+        formArray.push({ key:items[i].name, value:items[i].value});
+    }
+
+    console.log(formArray);
 
 })};
