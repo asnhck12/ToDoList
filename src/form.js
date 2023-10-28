@@ -1,18 +1,22 @@
-const formArray = [];
+const formSubmissions = [];
 
-//export function for form submission
+
 export function formSubmission(form) {
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    //store form details in local storage
-    var items = document.getElementsByClassName("projectForm");
-
-    for (let i = 0; i < items.length; i++){
-        localStorage.setItem(items[i].name, items[i].value);
-        formArray.push({ key:items[i].name, value:items[i].value});
+    var j = 0;
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        //store form details in local storage
+        var items = document.getElementsByClassName("projectForm");
+        j += 1;
+        const formData = {};
+        
+        for (let i = 0; i < items.length; i++) {
+            formData[items[i].name]=items[i].value;
+        }
+        formSubmissions.push(formData);
+        localStorage.setItem("submissions", JSON.stringify(formSubmissions));
     }
 
-    console.log(formArray);
-
-})};
+    )
+};
