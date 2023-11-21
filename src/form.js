@@ -2,10 +2,11 @@ const formSubmissions = [];
 
 
 export function formSubmission(form) {
-    var j = 0;
+    var j = -1;
     form.addEventListener("submit", function(e) {
         e.preventDefault();
-        
+        const formSubmissions = [];
+
         //store form details in local storage
         var items = document.getElementsByClassName("projectForm");
         j += 1;
@@ -14,8 +15,9 @@ export function formSubmission(form) {
         for (let i = 0; i < items.length; i++) {
             formData[items[i].name]=items[i].value;
         }
-        formSubmissions.push(formData);
-        localStorage.setItem("submissions", JSON.stringify(formSubmissions));
+        console.log("form: " + formData);
+        var submission = "submissions" + j;
+        localStorage.setItem(submission, JSON.stringify(formData));
     }
 
     )
