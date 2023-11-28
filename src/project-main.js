@@ -1,5 +1,6 @@
 import { addToDo } from "./add-to-do-list";
 import { projectSidebar } from "./project-lists";
+import { toDoListListed } from "./to-do-list";
 
 export function projectMainSection () {
 
@@ -46,9 +47,13 @@ for (let i = 0; i < divProjects.length; i++) {
             toDoListSubmit.setAttribute('id','submitToDo');
             toDoListSubmit.innerHTML = "Add";
             divProjectView.appendChild(toDoListSubmit);
-            
 
-            addToDo(i, toDoListText, toDoListSubmit);
+           
+
+            addToDo(i, toDoListText, toDoListSubmit, divProjectView);
+
+            toDoListListed(divProjectView, formSubmissionArray);
+       
 
             
             })}}

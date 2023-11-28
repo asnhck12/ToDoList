@@ -8,9 +8,7 @@ export function projectSidebar(projectOptions) {
 
         var submission = "submissions" + projectCount;
         var formSubmissionData = JSON.parse(localStorage.getItem(submission));
-        // var formSubmissionData = formSubmissionArray[projectCount];
- 
-        // console.log(formSubmissionData);
+
         let projectName = formSubmissionData.project;
 
         const newProjectDiv = document.createElement('div');
@@ -22,5 +20,4 @@ export function projectSidebar(projectOptions) {
         projectOptions.appendChild(newProjectDiv);
 
         projectMainSection();
-        // formSubmissionArray, projectName, description, dueDate, priority, toDoList
         })}
