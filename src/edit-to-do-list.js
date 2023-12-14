@@ -1,28 +1,25 @@
 import { toDoListListed } from "./to-do-list";
 
-export function editToDoList (currentForm, formSubmissionItem) {
-    let toDoListSection = document.getElementById("toDoList");
+export function editToDoList (i, currentForm, formSubmissionItem, toDoItem) {
     let toDoClassArrayCurrent = currentForm.toDoClass;
     
-    let toDoListItems = toDoListSection.getElementsByTagName('li');
 
         //Adds or removes the class that is striked through whichever todo is selected
-        for (let i = 0; i < toDoListItems.length; i ++) {
-            toDoListItems[i].addEventListener("click", function() {
-                if (toDoListItems[i].classList.contains("strkthru")){
-                    console.log("contains class " + toDoListItems[i]);
-                    toDoListItems[i].classList.remove("strkthru");
+            toDoItem.addEventListener("click", function() {
+                if (toDoItem.classList.contains("strkthru")){
+                    console.log("contains class " + toDoItem);
+                    toDoItem.classList.remove("strkthru");
                     toDoClassArrayCurrent[i] = "No";
                     currentForm.toDoClass = toDoClassArrayCurrent;
                     localStorage.setItem((formSubmissionItem), JSON.stringify(currentForm));    
                 }
                 else {
-                    console.log("doesnt contain class" + toDoListItems[i]);
-                    toDoListItems[i].classList.add("strkthru");
+                    console.log("doesnt contain class" + toDoItem);
+                    toDoItem.classList.add("strkthru");
                     toDoClassArrayCurrent[i] = "Yes";
                     currentForm.toDoClass = toDoClassArrayCurrent;
                     localStorage.setItem((formSubmissionItem), JSON.stringify(currentForm));    
     }
    }   )
     }
-}
+// }

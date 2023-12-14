@@ -5,7 +5,7 @@ import { toDoListListed } from "./to-do-list";
 export function addToDo(i, toDoListText, toDoListSubmit, divProjectView, formSubmissionSpecific) {
         const toDoArray = [];
         const toDoClassArray = [];
-        var counter = -1;
+        var j = -1;
         var currentForm = JSON.parse(localStorage.getItem("submissions" + i));
         var currentFormItem = "submissions" + i;
 
@@ -15,6 +15,7 @@ export function addToDo(i, toDoListText, toDoListSubmit, divProjectView, formSub
         toDoText = toDoListText.value;
         const toDoListDiv = document.createElement('ul');
         toDoListDiv.setAttribute('id', 'toDoList');
+        j++;
         
         //Creates a new item to the to-do list to be stored into localstorage
         if (currentForm.toDo === undefined) {
@@ -27,7 +28,7 @@ export function addToDo(i, toDoListText, toDoListSubmit, divProjectView, formSub
             localStorage.setItem("submissions" + i, JSON.stringify(currentForm));
             toDoListDiv.appendChild(toDoItem);
             divProjectView.appendChild(toDoListDiv); 
-            editToDoList(currentForm, "submissions" + i);
+            editToDoList(j, currentForm, "submissions" + i, toDoItem);
         }
     
         //Adds a new item to an exisiting to-do list stored in localstorage
@@ -42,6 +43,8 @@ export function addToDo(i, toDoListText, toDoListSubmit, divProjectView, formSub
             toDoItem.textContent = toDoText;
             localStorage.setItem("submissions" + i, JSON.stringify(currentForm));
             existingToDoListDiv.appendChild(toDoItem);
-            editToDoList(currentForm, "submissions" + i);
-                                    }})
+            editToDoList(j, currentForm, "submissions" + i, toDoItem);
+                                    }
+                    
+                                })
             }

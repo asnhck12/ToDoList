@@ -21,14 +21,11 @@ let toDoListCurrent = currentForm.toDo;
                     toDoItem.classList.add("strkthru");
                 }
                 else {
-                }    
+                }
+                editToDoList(i, currentForm,formSubmissionSpecific, toDoItem);    
                 divProjectView.appendChild(toDoListDiv);
-                // editToDoList(i, currentForm,formSubmissionSpecific);
-                // editToDoList(currentForm,formSubmissionSpecific);
-
-                
             }
-            editToDoList(currentForm,formSubmissionSpecific);
+            
 
         }
 
