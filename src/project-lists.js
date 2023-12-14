@@ -1,7 +1,9 @@
+import { editToDoList } from './edit-to-do-list.js';
 import { projectMainSection } from './project-main.js';
 
 var projectCount = -1;
 
+//Create a list of the projects
 export function projectSidebar(projectOptions) {
     form.addEventListener("submit", function(e) {
     projectCount +=1;
@@ -20,4 +22,6 @@ export function projectSidebar(projectOptions) {
         projectOptions.appendChild(newProjectDiv);
 
         projectMainSection();
+        // editToDoList(currentForm,formSubmissionSpecific);
+
         })}

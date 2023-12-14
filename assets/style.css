@@ -7,14 +7,31 @@ html {
 body {
     margin: 0;
     height: 100%;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#main {
+    margin: 0;
+    height: 100%;
     width: 100%;
+    background-color: #F2EFEE;
+
+}
+
+#close-form {
+    align-self: right;
 }
 
 #content {
-    border: 1px black solid;
+    /* border: 1px black solid; */
     display: grid;
     grid-template-rows: 1fr 7fr;
     height: 100%;
+    background-color: #F2EFEE;
         
 }
 
@@ -26,19 +43,48 @@ body {
     
 }
 
-#content * {
-    border: 1px red solid;
+#fullProjectView, #projectLists, #formSection {
+    padding-left: 1%;
+    /* border: 1px black solid; */
 }
 
-#menu {
+#formSection {
+    padding-left: 1%;
+    padding: 1%;
+    /* border: 1px black solid; */
+}
+
+#toDoList {
+    padding: 0%;
+}
+
+
+button, #submit-form {
+    height: 25px;
+    width: 60px;
+    background-color: #F2C55E;
+
+}
+
+* {
+    color: #4C5A67;
+}
+
+#header {
     display: grid;
     grid-template-columns: 1fr 8fr;
+    height: 100%;
+    /* background-color: #F2EFEE; */
 }
 
 #sidebar {
     display: grid;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: 90px 10fr;
 
+}
+
+.projectHeaders {
+    height: 50px;
 }
 
 #projectLists {
@@ -50,21 +96,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 60px;
+    min-width: 140px;
+    /* background-color: #F2EFEE; */
+
+}  
+ 
+#newProjectButton {
+    /* border: 1px black solid; */
+    background-color: white;
+    width: 75%;
+    height: 75%;
+    font-size: medium;
+    background-color: #F2C55E;
+    font-weight: 700;
+    font-size: large;
 }
 
-#newProjectButton {
-    border: 1px black solid;
-    background-color: white;
-    height: 40px;
-    width: 100px;
-    font-size: medium;
-
+#projectLists {
+    background-color: #F2EFEE;
 }
 
 #main {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-
+    grid-template-columns: 220px 4fr;
 }
 
 img {
@@ -72,6 +127,21 @@ img {
     max-height: 100%;
     display: block;
     margin: auto;
-    
-
 }
+
+#logo {
+    height: fit-content;
+}
+
+.strkthru {
+    text-decoration: line-through;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* #logo img {
+    height: 100%;
+    width: 100%;
+} */
