@@ -1,4 +1,3 @@
-import { editToDoList } from './edit-to-do-list.js';
 import { projectMainSection } from './project-main.js';
 
 var projectCount = -1;
@@ -15,13 +14,11 @@ export function projectSidebar(projectOptions) {
 
         const newProjectDiv = document.createElement('div');
         const newProjectHeading = document.createElement('h3');
-        newProjectDiv.setAttribute ('id', 'projectNum' + projectCount);
+        // newProjectDiv.setAttribute ('id', 'projectNum' + projectCount);
         newProjectDiv.classList.add("projectHeaders");
         newProjectHeading.innerHTML = projectName;
         newProjectDiv.appendChild(newProjectHeading);
         projectOptions.appendChild(newProjectDiv);
 
         projectMainSection();
-        // editToDoList(currentForm,formSubmissionSpecific);
-
         })}

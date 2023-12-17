@@ -1,11 +1,7 @@
-// const formSubmissions = [];
-
-
 export function formSubmission(form) {
     var j = -1;
     form.addEventListener("submit", function(e) {
         e.preventDefault();
-        // const formSubmissions = [];
 
         //stores all form details in local storage
         var items = document.getElementsByClassName("projectForm");
@@ -18,6 +14,4 @@ export function formSubmission(form) {
         var submission = "submissions" + j;
         localStorage.setItem(submission, JSON.stringify(formData));
         formSection.style.display="none";
-    }
-    )
-};
+    })};

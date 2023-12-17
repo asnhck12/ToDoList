@@ -1,6 +1,4 @@
 import { addToDo } from "./add-to-do-list";
-import { editToDoList } from "./edit-to-do-list";
-import { projectSidebar } from "./project-lists";
 import { toDoListListed } from "./to-do-list";
 
 export function projectMainSection () {
@@ -13,7 +11,13 @@ var br = document.createElement("br");
 //Generates details of a submitted project based on stored details submitted using the form
 for (let i = 0; i < divProjects.length; i++) {
         divProjects[i].addEventListener("click", function() {
+            for (let j = 0; j < divProjects.length; j++) {
+                divProjects[j].removeAttribute("id");
+            }
+            divProjects[i].setAttribute("id", "selectedProject");
+            this.setAttribute("id", "selected-project"); 
             divProjectView.innerHTML="";
+            
             var formSubmissionArray = JSON.parse(localStorage.getItem("submissions" + i));
             var formSubmissionSpecific = "submissions" + i;
 
@@ -22,17 +26,14 @@ for (let i = 0; i < divProjects.length; i++) {
             let dueDate = formSubmissionArray.dueDate;
             let priority = formSubmissionArray.priority;
             let toDoList = formSubmissionArray.toDo;
-
             
             const projectHeader = document.createElement('h1');
             projectHeader.innerHTML = title;
             divProjectView.appendChild(projectHeader);
 
-
             const projectDescription = document.createElement('p');
             projectDescription.innerHTML = "Description: " + description;
             divProjectView.appendChild(projectDescription);
-
 
             const projectDueDate = document.createElement('input');
             projectDueDate.type = "date";
@@ -44,6 +45,7 @@ for (let i = 0; i < divProjects.length; i++) {
             divProjectView.appendChild(projectDueDateTitle);
             divProjectView.appendChild(projectDueDate);
             projectDueDate.addEventListener("change", function(e) {
+                var formSubmissionArray = JSON.parse(localStorage.getItem("submissions" + i));
                 formSubmissionArray.dueDate = projectDueDate.value;
                 localStorage.setItem("submissions" + i, JSON.stringify(formSubmissionArray));
             });
@@ -73,6 +75,7 @@ for (let i = 0; i < divProjects.length; i++) {
             divProjectView.appendChild(projectPriorityTitle);
             divProjectView.appendChild(projectPriority);
             projectPriority.addEventListener("change", function(e) {
+                var formSubmissionArray = JSON.parse(localStorage.getItem("submissions" + i));
                 formSubmissionArray.priority = projectPriority.value;
                 localStorage.setItem("submissions" + i, JSON.stringify(formSubmissionArray));
             })

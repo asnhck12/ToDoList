@@ -27,7 +27,6 @@ h2 {
 }
 
 #content {
-    /* border: 1px black solid; */
     display: grid;
     grid-template-rows: 1fr 7fr;
     height: 100%;
@@ -45,19 +44,20 @@ h2 {
 
 #fullProjectView, #projectLists, #formSection {
     padding-left: 1%;
-    /* border: 1px black solid; */
 }
 
 #formSection {
     padding-left: 1%;
     padding: 1%;
-    /* border: 1px black solid; */
 }
 
 #toDoList {
     padding: 0%;
 }
 
+#selected-project {
+    background-color: #c8bbb6;
+}
 
 button, #submit-form {
     height: 25px;
@@ -74,7 +74,6 @@ button, #submit-form {
     display: grid;
     grid-template-columns: 1fr 8fr;
     height: 100%;
-    /* background-color: #F2EFEE; */
 }
 
 #sidebar {
@@ -85,11 +84,14 @@ button, #submit-form {
 
 .projectHeaders {
     height: 50px;
+    width: 100%;
+    text-align: center;
 }
-
 #projectLists {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 #newProject {
@@ -98,12 +100,9 @@ button, #submit-form {
     align-items: center;
     min-height: 60px;
     min-width: 140px;
-    /* background-color: #F2EFEE; */
-
 }  
  
 #newProjectButton {
-    /* border: 1px black solid; */
     background-color: white;
     width: 75%;
     height: 75%;
@@ -140,8 +139,3 @@ img {
 ul {
     list-style-type: none;
 }
-
-/* #logo img {
-    height: 100%;
-    width: 100%;
-} */
