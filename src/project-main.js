@@ -86,20 +86,28 @@ for (let i = 0; i < divProjects.length; i++) {
             const toDoListText = document.createElement('input');
             toDoListText.setAttribute("type", "text");
             toDoListText.setAttribute('id','toDoText');
+            toDoListText.setAttribute('minlength', '5');
+            toDoListText.required = true;
             const toDoListSubmitTitle = document.createElement("label");
             toDoListSubmitTitle.setAttribute("for", "toDoList");
             toDoListSubmitTitle.innerHTML = "To Do List: ";
             divProjectView.appendChild(toDoListSubmitTitle);
-            divProjectView.appendChild(toDoListText);
+            // divProjectView.appendChild(toDoListText);
 
 
             const toDoListSubmit = document.createElement('button');
             toDoListSubmit.setAttribute('type', 'submit');
             toDoListSubmit.setAttribute('id','submitToDo');
             toDoListSubmit.innerHTML = "Add";
-            divProjectView.appendChild(toDoListSubmit);
+            // divProjectView.appendChild(toDoListSubmit);
 
-            addToDo(i, toDoListText, toDoListSubmit, divProjectView);
+            const toDoForm = document.createElement( 'form' );
+            toDoForm.setAttribute("id","toDoForm");
+            toDoForm.appendChild(toDoListText);
+            toDoForm.appendChild(toDoListSubmit);
+            divProjectView.appendChild(toDoForm);
+
+            addToDo(i, toDoListText, toDoForm, divProjectView);
             toDoListListed(divProjectView, formSubmissionArray, formSubmissionSpecific);
             
 
