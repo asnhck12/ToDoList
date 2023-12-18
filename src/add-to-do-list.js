@@ -1,6 +1,6 @@
 import { toDoListListed } from "./to-do-list";
 
-export function addToDo(i, toDoListText, toDoListSubmit, divProjectView, formSubmissionSpecific) {
+export function addToDo(i, toDoListText, toDoListSubmit, divProjectView) {
         var currentForm = JSON.parse(localStorage.getItem("submissions" + i));
 
     //Submits a to do item

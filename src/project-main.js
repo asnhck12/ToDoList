@@ -92,14 +92,11 @@ for (let i = 0; i < divProjects.length; i++) {
             toDoListSubmitTitle.setAttribute("for", "toDoList");
             toDoListSubmitTitle.innerHTML = "To Do List: ";
             divProjectView.appendChild(toDoListSubmitTitle);
-            // divProjectView.appendChild(toDoListText);
-
 
             const toDoListSubmit = document.createElement('button');
             toDoListSubmit.setAttribute('type', 'submit');
             toDoListSubmit.setAttribute('id','submitToDo');
             toDoListSubmit.innerHTML = "Add";
-            // divProjectView.appendChild(toDoListSubmit);
 
             const toDoForm = document.createElement( 'form' );
             toDoForm.setAttribute("id","toDoForm");

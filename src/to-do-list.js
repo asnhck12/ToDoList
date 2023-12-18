@@ -1,6 +1,4 @@
 import { editToDoList } from "./edit-to-do-list";
-import { formSubmission } from "./form";
-import { projectMainSection } from "./project-main";
 
 export function toDoListListed(divProjectView, currentForm, formSubmissionSpecific) {
 

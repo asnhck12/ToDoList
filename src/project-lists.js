@@ -14,7 +14,6 @@ export function projectSidebar(projectOptions) {
 
         const newProjectDiv = document.createElement('div');
         const newProjectHeading = document.createElement('h3');
-        // newProjectDiv.setAttribute ('id', 'projectNum' + projectCount);
         newProjectDiv.classList.add("projectHeaders");
         newProjectHeading.innerHTML = projectName;
         newProjectDiv.appendChild(newProjectHeading);
