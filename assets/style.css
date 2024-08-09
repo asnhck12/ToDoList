@@ -205,3 +205,16 @@ form button, #submit-form {
 .projectDescriptionDiv p {
     margin: 0;
 }
+
+#gitHubIcon img {
+    width: 40px;
+    height: auto;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}

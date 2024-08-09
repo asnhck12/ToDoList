@@ -3,7 +3,7 @@ export function formSubmission(form) {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
 
-        //stores all form details in local storage
+        //stores all form details in the local storage
         var items = document.getElementsByClassName("projectForm");
         j += 1;
         const formData = {};

@@ -22,7 +22,7 @@ newProjectButton.addEventListener("click", function(a) {
     }
 });
 
-//close the project view
+//closes the project view
 closeButton.addEventListener("click", function(a) {
     formSection.style.display="none";
     form.reset();

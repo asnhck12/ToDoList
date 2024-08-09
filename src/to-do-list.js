@@ -5,8 +5,6 @@ export function toDoListListed(divProjectView, currentForm, formSubmissionSpecif
 let toDoListCurrent = currentForm.toDo;
 let toDoListDiv;
 
-
-
 if (document.getElementById("toDoList") === null) {
     toDoListDiv = document.createElement('ul');
     toDoListDiv.setAttribute('id', 'toDoList');
