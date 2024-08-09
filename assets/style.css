@@ -167,7 +167,7 @@ ul {
     text-align: center;
 }
 
-.projectHeaders:hover, button:hover, #submit-form:hover {
+.projectHeaders:hover, button:hover, #submit-form:hover, li:hover {
     cursor: pointer;
 }
 
