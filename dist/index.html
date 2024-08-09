@@ -11,9 +11,9 @@
 <body>
     <div id="content">
         <div id="header">
-            <div id="logo">
+            <!-- <div id="logo">
                 <img src="../assets/ToDoLogo.png" alt="Logo">
-            </div>
+            </div> -->
             <div id="title">
                 My To Do List
             </div>
@@ -21,30 +21,44 @@
         <div id="main">
             <div id="sidebar">
                 <div id="newProject">
-                    <button id="newProjectButton">New Project</button>
+                    <button id="newProjectButton">Add a Project</button>
                 </div>
                 <div id="projectLists">
-                    <h2>Projects</h2>
+                    <div class="projectHeader">
+                        <h2>Projects</h2>
+                    </div>
                 </div>
             </div>
             <div id="projectView">
                 <div id="formSection">
                     <form id="form">
-                        <label for="projectName">Project:</label>
-                        <input type="text" id="project" name="project" class="projectForm" minlength="5" required><br><br>
-                        <label for="projectDescription">Description:</label>
-                        <input type="text" id="description" name="Description" class="projectForm" minlength="5" required><br><br>
-                        <label for="projectDueDate">Due Date:</label>
-                        <input type="date" id="dueDate" name="dueDate" value="2024-01-01" class="projectForm"><br><br>
-                        <label for="priority">Priority:</label>
-                        <select id="priority" name="priority" class="projectForm">
-                            <option value="High">High</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Low">Low</option>
-                        </select><br>
-                        <br><br>
-                        <input id ="submit-form" type="submit" value="Submit">
-                        <button id="close-form">Close</button> 
+                        <div class="projectFieldHeader">
+                            <h1>New Project</h1>
+                        </div>
+                        <div class="projectField">
+                            <label for="projectName">Project</label>
+                            <input type="text" id="project" name="project" class="projectForm" minlength="5" required>
+                        </div>
+                        <div class="projectField">
+                            <label for="projectDescription">Description</label>
+                            <input type="text" id="description" name="Description" class="projectForm" minlength="5" required>
+                        </div>
+                        <div class="projectField">
+                            <label for="projectDueDate">Due Date</label>
+                            <input type="date" id="dueDate" name="dueDate" value="2024-01-01" class="projectForm">
+                        </div>
+                        <div class="projectField">
+                            <label for="priority">Priority</label>
+                            <select id="priority" name="priority" class="projectForm">
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                        <div class="projectButtonsField">
+                            <input id ="submit-form" type="submit" value="Submit">
+                            <button id="close-form">Close</button> 
+                        </div>
                     </form>
                 </div>
                 <div id="fullProjectView">

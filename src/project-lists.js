@@ -2,7 +2,7 @@ import { projectMainSection } from './project-main.js';
 
 var projectCount = -1;
 
-//Create a list of the projects
+//Generates a list of the projects to be displayed in the side panel
 export function projectSidebar(projectOptions) {
     form.addEventListener("submit", function(e) {
     projectCount +=1;

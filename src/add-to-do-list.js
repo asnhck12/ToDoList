@@ -13,7 +13,7 @@ export function addToDo(i, toDoListText, toDoListSubmit, divProjectView) {
         const toDoListDiv = document.createElement('ul');
         toDoListDiv.setAttribute('id', 'toDoList');
         
-        //Creates a new item to the to-do list to be stored into localstorage
+        //Adds a new item to the to-do list to be stored in the localstorage
         if (currentForm.toDo === undefined) {
             toDoArray.push(toDoText);
             toDoClassArray.push("No");

@@ -18,7 +18,7 @@ h2 {
     margin: 0;
     height: 100%;
     width: 100%;
-    background-color: #F2EFEE;
+    background-color: white;
 
 }
 
@@ -30,7 +30,7 @@ h2 {
     display: grid;
     grid-template-rows: 1fr 7fr;
     height: 100%;
-    background-color: #F2EFEE;
+    background-color: white;
         
 }
 
@@ -39,6 +39,7 @@ h2 {
     text-align: center;
     font-size: xx-large;
     font-weight: bold;
+    color: white;
     
 }
 
@@ -46,9 +47,23 @@ h2 {
     padding-left: 1%;
 }
 
+
+
+#fullProjectView {
+display: flex;
+flex-direction: column;
+gap: 20px;
+font-size: x-large;
+}
+
 #formSection {
-    padding-left: 1%;
     padding: 1%;
+    width: 350px;
+}
+
+.projectField {
+    display: grid;
+    grid-template-rows: 30px 1fr;
 }
 
 #toDoList {
@@ -56,36 +71,43 @@ h2 {
 }
 
 #selected-project {
-    background-color: #c8bbb6;
+    background-color: black;
+}
+
+#selected-project h3 {
+    color: white;
 }
 
 button, #submit-form {
     height: 25px;
     width: 60px;
-    background-color: #F2C55E;
-
 }
 
 * {
-    color: #4C5A67;
+    color: black;
 }
 
 #header {
     display: grid;
-    grid-template-columns: 1fr 8fr;
     height: 100%;
+    align-items: center;
+    justify-items: left;
+    padding-left: 10px;
+    background-color: black;
 }
 
 #sidebar {
     display: grid;
-    grid-template-rows: 90px 10fr;
-
+    grid-template-rows: 120px 10fr;
 }
 
 .projectHeaders {
     height: 50px;
     width: 100%;
     text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 #projectLists {
     display: flex;
@@ -98,22 +120,22 @@ button, #submit-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60px;
+    min-height: 100px;
     min-width: 140px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }  
  
 #newProjectButton {
     background-color: white;
     width: 75%;
     height: 75%;
-    font-size: medium;
-    background-color: #F2C55E;
     font-weight: 700;
-    font-size: large;
+    font-size: larger;
 }
 
 #projectLists {
-    background-color: #F2EFEE;
+    background-color: white;
 }
 
 #main {
@@ -138,4 +160,48 @@ img {
 
 ul {
     list-style-type: none;
+}
+
+.projectHeader {
+    width: 100%;
+    text-align: center;
+}
+
+.projectHeaders:hover, button:hover, #submit-form:hover {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: x-large;
+}
+
+form input, #priority, #dueDate {
+    height: 30px;
+    font-size: large;
+}
+
+form button, #submit-form {
+    background-color: white;
+    font-size: large;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    font-weight: 300;
+}
+
+#projectView {
+    padding: 30px;
+}
+
+.projectMainFields {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.projectDescriptionDiv p {
+    margin: 0;
 }
