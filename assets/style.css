@@ -1,0 +1,224 @@
+html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#main {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+}
+
+#close-form {
+    align-self: right;
+}
+
+#content {
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+    height: 100%;
+    background-color: white;
+        
+}
+
+#title {
+    align-self: center;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    
+}
+
+#fullProjectView, #projectLists, #formSection {
+    padding-left: 1%;
+}
+
+
+
+#fullProjectView {
+display: flex;
+flex-direction: column;
+gap: 20px;
+font-size: x-large;
+}
+
+#formSection {
+    padding: 1%;
+    width: 350px;
+}
+
+.projectField {
+    display: grid;
+    grid-template-rows: 30px 1fr;
+}
+
+#toDoList {
+    padding: 0%;
+}
+
+#selected-project {
+    background-color: black;
+}
+
+#selected-project h3 {
+    color: white;
+}
+
+button, #submit-form {
+    height: 25px;
+    width: 60px;
+}
+
+* {
+    color: black;
+}
+
+#header {
+    display: grid;
+    height: 100%;
+    align-items: center;
+    justify-items: left;
+    padding-left: 10px;
+    background-color: black;
+}
+
+#sidebar {
+    display: grid;
+    grid-template-rows: 120px 10fr;
+}
+
+.projectHeaders {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#projectLists {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#newProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    min-width: 140px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}  
+ 
+#newProjectButton {
+    background-color: white;
+    width: 75%;
+    height: 75%;
+    font-weight: 700;
+    font-size: larger;
+}
+
+#projectLists {
+    background-color: white;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 220px 4fr;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+#logo {
+    height: fit-content;
+}
+
+.strkthru {
+    text-decoration: line-through;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.projectHeader {
+    width: 100%;
+    text-align: center;
+}
+
+.projectHeaders:hover, button:hover, #submit-form:hover, li:hover {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: x-large;
+}
+
+form input, #priority, #dueDate {
+    height: 30px;
+    font-size: large;
+}
+
+form button, #submit-form {
+    background-color: white;
+    font-size: large;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    font-weight: 300;
+}
+
+#projectView {
+    padding: 30px;
+}
+
+.projectMainFields {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.projectDescriptionDiv p {
+    margin: 0;
+}
+
+#gitHubIcon img {
+    width: 40px;
+    height: auto;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+a {
+    text-decoration: none;
+}
