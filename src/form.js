@@ -14,4 +14,5 @@ export function formSubmission(form) {
         var submission = "submissions" + j;
         localStorage.setItem(submission, JSON.stringify(formData));
         formSection.style.display="none";
+        form.reset();
     })};

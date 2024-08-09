@@ -218,3 +218,7 @@ form button, #submit-form {
     justify-content: center;
     gap: 5px;
 }
+
+a {
+    text-decoration: none;
+}
